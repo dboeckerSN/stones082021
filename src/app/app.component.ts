@@ -12,4 +12,9 @@ export class AppComponent {
   onPriceChanged(price: number) {
     alert('Aktueller Preis: ' + price);
   }
+
+  public changePrice(price: string) {
+    this.parentProduct.price = Number(price);
+    alert('Aktueller Preis: ' + this.parentProduct.price)
+  }
 }

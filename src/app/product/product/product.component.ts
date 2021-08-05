@@ -20,4 +20,5 @@ export class ProductComponent implements OnInit {
     this.product.price += 5;
     this.priceChange.emit(this.product.price);
   }
+
 }
