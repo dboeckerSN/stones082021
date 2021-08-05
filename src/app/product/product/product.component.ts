@@ -9,6 +9,11 @@ import { Product } from '../product';
 export class ProductComponent implements OnInit {
   @Input() public product!: Product;
   @Output() priceChange = new EventEmitter<number>();
+  showWeight = true;
+
+  public styleConfig = {
+    'border-style' : 'dashed',
+  }
 
   constructor() {
    }
@@ -21,4 +26,7 @@ export class ProductComponent implements OnInit {
     this.priceChange.emit(this.product.price);
   }
 
+  toggleWeight() {
+    this.showWeight = !this.showWeight;
+  }
 }
