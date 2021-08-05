@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { UtilsModule } from 'src/app/utils/utils.module';
 import { Product } from '../product';
 
 import { ProductComponent } from './product.component';
@@ -10,7 +11,7 @@ describe('ProductComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductComponent ]
+      declarations: [ ProductComponent ], imports:[UtilsModule]
     })
     .compileComponents();
   });
