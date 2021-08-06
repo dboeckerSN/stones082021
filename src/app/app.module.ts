@@ -7,7 +7,6 @@ import { ProductModule } from './product/product.module';
 import { UtilsModule } from './utils/utils.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -21,7 +20,6 @@ import {MatCardModule} from '@angular/material/card';
     UtilsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

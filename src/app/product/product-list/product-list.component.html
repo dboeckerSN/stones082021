@@ -1,0 +1,5 @@
+<mat-card *ngFor="let prod of products; let isEven = even" [ngClass]="{'is-even': isEven}">
+  <stn-product [product]="prod">
+  </stn-product>
+</mat-card>>
+
