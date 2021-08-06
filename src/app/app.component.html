@@ -3,9 +3,11 @@
 </mat-toolbar>
 {{ date | date: "dd.MM.yyyy" }}
 
-<div *ngFor="let prod of products | slice:0:3; let isEven = even" [ngClass]="{'is-even': isEven}">
+<stn-product-form (productSaved)="onProductSaved($event)"></stn-product-form>
+
+<mat-card *ngFor="let prod of products; let isEven = even" [ngClass]="{'is-even': isEven}">
   <stn-product [product]="prod" (priceChange)="onPriceChanged($event)">
     <br><input type="number" #price />
     <br><button (click)="changePrice(price.value)">Preis ändern</button>
   </stn-product>
-</div>
+</mat-card>>

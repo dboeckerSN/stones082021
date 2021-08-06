@@ -8,7 +8,6 @@ import { Product } from './product/product';
 })
 export class AppComponent {
   public date = new Date();
-  public parentProduct = new Product(12, 'Granitstein Gravo', 134.56, 12);
   products: Array<Product> = [
     {
       id: 0,
@@ -58,8 +57,14 @@ export class AppComponent {
     alert('Aktueller Preis: ' + price);
   }
 
+  onProductSaved(newProd: Product) {
+    newProd.id = 0;
+    this.products.unshift(newProd);
+  }
+
+
   public changePrice(price: string) {
-    this.parentProduct.price = Number(price);
-    alert('Aktueller Preis: ' + this.parentProduct.price)
+    // this.parentProduct.price = Number(price);
+    // alert('Aktueller Preis: ' + this.parentProduct.price)
   }
 }
