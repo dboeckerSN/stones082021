@@ -24,6 +24,7 @@ export class ProductComponent implements OnInit {
   public raisePrice(): void {
     this.product.price += 5;
     this.priceChange.emit(this.product.price);
+    console.log('Neuer Preis gesetzt' + this.product.price)
   }
 
   toggleWeight() {

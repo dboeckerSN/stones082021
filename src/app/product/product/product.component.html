@@ -1,4 +1,4 @@
-<div [ngStyle]="styleConfig" [ngClass]="{'border-green' : product.price < 50}">
+<mat-card>
   <ng-content></ng-content>
   <ul>
     <li [hidden]="showWeight">Id: {{product.id}}</li>
@@ -10,5 +10,5 @@
     <li *ngIf="showWeight">Gewicht: {{product.weight}}</li>
   </ul>
   <button (click)="raisePrice()">Preis erhöhen</button>
-  <br><button (click)="toggleWeight()">Gewicht ein-/ausblenden</button>
-</div>
+  <br><button mat-raised-button color="primary" (click)="toggleWeight()">Gewicht ein-/ausblenden</button>
+</mat-card>
