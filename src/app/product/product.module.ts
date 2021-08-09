@@ -11,6 +11,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ProductListComponent } from './product-list/product-list.component';
 import {MatCardModule} from '@angular/material/card';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {MatCardModule} from '@angular/material/card';
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
+    HttpClientModule,
   ],
   exports: [
     ProductComponent,

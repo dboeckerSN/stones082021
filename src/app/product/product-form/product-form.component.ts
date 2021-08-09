@@ -32,7 +32,7 @@ export class ProductFormComponent implements OnInit {
 
   save() {
     if(this.productForm.valid){
-      this.pService.addProduct({id: 1 , ...this.productForm.value});
+      this.pService.addProduct(this.productForm.value).subscribe();
     }
   }
 
